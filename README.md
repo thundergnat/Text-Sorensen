@@ -103,7 +103,9 @@ The list of words will be tokenized, the coefficient calculated, entries with co
 
 Each word comparison will return a 2 element array consisting of:
 
-* the SDC from the :ge threshold (default .5) to 1 (identical). * the word that was checked.
+* the SDC from the :ge threshold (default .5) to 1 (identical).
+
+* the word that was checked.
 
 That works well but retokenizes the list every time it is invoked.
 

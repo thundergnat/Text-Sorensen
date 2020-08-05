@@ -3,6 +3,8 @@ NAME Text::Sorensen
 
 Calculate the Sorensen-Dice or Jaccard similarity coefficient.
 
+[![Build Status](https://travis-ci.org/thundergnat/Text-Sorensen.svg?branch=master)](https://travis-ci.org/thundergnat/Text-Sorensen)
+
 SYNOPSIS
 ========
 
@@ -56,7 +58,7 @@ For both operations, each word / phrase is broken up into tokens for the compari
 
 This tokenized word is then compared to another tokenized word to calculate the similarity.
 
-The bi-gram routine case-folds the words before tokenizing so the comparison routines ignore case differences. 
+The bi-gram routine case-folds the words before tokenizing so the comparison routines ignore case differences.
 
 A great deal of the work is spent in tokenizing the words. If you plan to do multiple comparisons to a large group of words, it may be worthwhile to pre-tokenize the word list to reduce the working time.
 

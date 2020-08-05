@@ -41,7 +41,7 @@ DESCRIPTION
 
 Both Sorensen-Dice and Jaccard calculate a "similarity" between two tokenized groups of items. They can be used to compare many different types of tokenized objects; this module is optimized to do a text similarity calculation.
 
-Both methods us a similar algorithm and, though they assign different weights, return nearly identical relative coefficients, and may be readily converted from one to the other.
+Both methods use a similar algorithm and, though they assign different weights, return nearly identical relative coefficients, and may be readily converted from one to the other.
 
 You can easily convert back and forth:
 
@@ -81,7 +81,7 @@ Always exported helper routine:
 
     sub bi-gram() # tokenize a word into a Bag of bi-grams
 
-==head3 Sorensen-Dice
+### Sorensen-Dice
 
     use Text::Sorensen :sorensen; # or some other alias
 
@@ -133,7 +133,7 @@ See the following. We compare the typo 'compition' against an entire dictionary,
     # [0.666667 compunction]
     # [0.666667 computation]
 
-==head3 Jaccard
+### Jaccard
 
     use Text::Sorensen :jaccard;
 
@@ -143,7 +143,7 @@ Instead of the intersection token count divided by the total token count, it is 
 
     +(@a ∩ @b) / ( (@a ⊎ @b) - (@a ∩ @b) )
 
-Jaccard coefficients tend to be even smaller than Sorensen-Dice but are again, a ratio between 0 and 1.
+Jaccard coefficients tend to be even smaller than Sorensen-Dice but are similarly, a ratio between 0 and 1.
 
 Again, multis are provided for a one-off list:
 

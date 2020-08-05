@@ -2,7 +2,7 @@
     "perl"          : "6",
     "name"          : "Text::Sorensen",
     "version"       : "0.0.1",
-    "description"   : "Calculate the Sorensen-Dice or Jaccard similarity of words",
+    "description"   : "Calculate the Sorensen-Dice or Jaccard similarity coefficient",
     "authors"       : [ "Steve Schulze (thundergnat)" ],
     "provides"      : { "Text::Sorensen" : "lib/Text/Sorensen.pm6" },
     "depends"       : [ ],

@@ -1,0 +1,17 @@
+{
+    "perl"          : "6",
+    "name"          : "Text::Sorensen",
+    "version"       : "0.0.1",
+    "description"   : "Calculate the Sorensen-Dice or Jaccard similarity of words",
+    "authors"       : [ "Steve Schulze (thundergnat)" ],
+    "provides"      : { "Text::Sorensen" : "lib/Text/Sorensen.pm6" },
+    "depends"       : [ ],
+    "build-depends" : [ ],
+    "test-depends"  : [ ],
+    "license"       : "Artistic-2.0",
+    "resources"     : [ ],
+    "source-type"   : "git",
+    "source-url"    : "git://github.com/thundergnat/Text-Sorensen.git",
+    "tags"          : [ "Sorensen", "Dice", "Jaccard", "similarity", "index" ]
+}
+

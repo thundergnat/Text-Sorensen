@@ -1,4 +1,4 @@
-unit module Text::Sorensen:ver<0.0.1>:auth<github:thundergnat>;
+unit module Text::Sorensen:ver<0.0.2>:auth<zef:thundergnat>;
 
 
 # Sorensen-Dice
@@ -55,38 +55,37 @@ Text::Sorensen
 
 Calculate the Sorensen-Dice or Jaccard similarity coefficient.
 
-[![Build Status](https://travis-ci.org/thundergnat/Text-Sorensen.svg?branch=master)](https://travis-ci.org/thundergnat/Text-Sorensen)
-
 =head1 SYNOPSIS
 
-=begin code
-    use Text::Sorensen :sorensen;
+=begin code :lang<raku>
 
-    # test a word against a small list
-    say sorensen('compition', 'completion', 'competition');
+use Text::Sorensen :sorensen;
 
-    # ([0.777778 competition] [0.705882 completion])
+# test a word against a small list
+say sorensen('compition', 'completion', 'competition');
 
-
-    # or against a large one
-    my %hash = './unixdict.txt'.IO.slurp.words.race.map: { $_ => .&bi-gram };
-
-    .say for sorensen('compition', %hash).head(5);
-    # [0.777778 competition]
-    # [0.777778 compilation]
-    # [0.777778 composition]
-    # [0.705882 completion]
-    # [0.7 decomposition]
+# ([0.777778 competition] [0.705882 completion])
 
 
-    use Text::Sorensen :jaccard;
+# or against a large one
+my %hash = './unixdict.txt'.IO.slurp.words.race.map: { $_ => .&bi-gram };
 
-    .say for jaccard('compition', %hash).head(5);
-    # [0.636364 competition]
-    # [0.636364 compilation]
-    # [0.636364 composition]
-    # [0.545455 completion]
-    # [0.538462 decomposition]
+.say for sorensen('compition', %hash).head(5);
+# [0.777778 competition]
+# [0.777778 compilation]
+# [0.777778 composition]
+# [0.705882 completion]
+# [0.7 decomposition]
+
+
+use Text::Sorensen :jaccard;
+
+.say for jaccard('compition', %hash).head(5);
+# [0.636364 competition]
+# [0.636364 compilation]
+# [0.636364 composition]
+# [0.545455 completion]
+# [0.538462 decomposition]
 
 
 =end code
@@ -103,12 +102,12 @@ from one to the other.
 
 You can easily convert back and forth:
 
-    # J   (Jaccard index)
+    # JI   (Jaccard index)
     # SDI (Sorensen-Dice index)
 
-    J = SDI / (2 - SDI)
+    JI = SDI / (2 - SDI)
 
-    SDI = 2 * J / (1 + J)
+    SDI = 2 * JI / (1 + JI)
 
 
 For both operations, each word / phrase is broken up into tokens for the
@@ -148,7 +147,7 @@ You'll need to import at least one similarity routine, or some combination, or
 
 Always exported helper routine:
 
-    sub bi-gram() # tokenize a word into a Bag of bi-grams
+    C<sub bi-gram()> # tokenize a word into a Bag of bi-grams
 
 
 =head3 Sorensen-Dice

@@ -1,4 +1,6 @@
-Revision history for Text::Sorensen
+Revision history for Text-Sorensen
 
+{{$NEXT}}
+    - Migrate to fez ecosystem
 
 0.0.1  - Initial version

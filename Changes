@@ -1,6 +1,8 @@
 Revision history for Text-Sorensen
 
 {{$NEXT}}
+
+0.0.2  2022-12-29T18:18:36-05:00
     - Migrate to fez ecosystem
 
 0.0.1  - Initial version
